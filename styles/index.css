@@ -1,0 +1,23 @@
+body{
+    background-color: transparent;
+}
+
+/* Navbar */
+nav{
+    background-color: #353A40;
+}
+
+.logo-cac{
+    width: 8rem;
+}
+
+.title-logo-cac{
+    display: none;
+}
+
+
+@media ( width >= 425px) {
+    .title-logo-cac{
+        display: inline-block;
+    }
+}
