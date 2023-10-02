@@ -4,7 +4,7 @@
   --color-green: #29a744;
   --color-green-form: #96c93e;
   --color-blue: #18a3b8;
-  --color-blue-footer: #1e4f6d;
+  --color-blue-footer: #1D4255;
   --color-yellow: #ffc208;
   --color-red: #dd3546;
 }
@@ -139,10 +139,33 @@ h2 {
 
 /* Form */
 
-
 .dotted {
   text-decoration: underline;
   text-decoration-style: dotted;
+}
+
+.form-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comments-label{
+  font-size: 1.5rem;
+  color: grey;
+}
+
+.btn-send{
+  background-color: var(--color-green-form);
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+footer{
+  margin-top: 2rem;
+  min-height: 15vh;
+  background-color: var(--color-blue-footer);
 }
 
 @media (width >= 425px) {
@@ -156,5 +179,17 @@ h2 {
     padding-right: 10rem;
     align-items: flex-end;
     text-align: end;
+  }
+}
+
+@media (width <= 605px){
+  .comments-label{
+    font-size: .8rem;
+  }
+}
+
+@media (width <= 350px){
+  .comments-label{
+    font-size: .7rem;
   }
 }
