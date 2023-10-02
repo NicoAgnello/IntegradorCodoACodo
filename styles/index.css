@@ -36,7 +36,7 @@ li a {
 
 /* Main  */
 
-main {
+.intro {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/ba1.jpg);
   background-size: auto;
   background-position: 0;
@@ -53,8 +53,96 @@ main {
   padding-inline: 2rem;
   color: var(--color-letter);
 }
+
 .container-intro p {
   font-size: 1.5rem;
+}
+
+section {
+  padding-top: 1rem;
+}
+
+section h2,
+section h3 {
+  color: black;
+  text-align: center;
+}
+
+section h3 {
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-weight: 650;
+  font-size: 2.4rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.title-container {
+  padding-block: 1rem;
+}
+
+.card-text {
+  line-height: 2rem;
+}
+
+.pill {
+  padding-inline: 0.5rem;
+  padding-block: 0.15rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.js-pill {
+  background-color: var(--color-yellow);
+}
+
+.react-pill {
+  background-color: var(--color-blue);
+  color: whitesmoke;
+}
+.business-pill {
+  background-color: var(--color-red);
+  color: whitesmoke;
+}
+
+.startup-pill {
+  background-color: var(--color-dark);
+  color: whitesmoke;
+}
+
+.honolulu-text-container {
+  background-color: var(--color-dark);
+  padding: 1.5rem;
+  margin-left: 1px;
+}
+
+.honolulu-text-container h2 {
+  text-align: start;
+}
+
+.honolulu-text-container h2,
+.honolulu-text-container p {
+  color: whitesmoke;
+}
+
+/* Form */
+
+
+.dotted {
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 @media (width >= 425px) {
