@@ -1,23 +1,244 @@
-body{
-    background-color: transparent;
+:root {
+  --color-dark: #353a40;
+  --color-letter: #f9ffff;
+  --color-green: #29a744;
+  --color-green-form: #96c93e;
+  --color-blue: #18a3b8;
+  --color-blue-footer: #1d4255;
+  --color-yellow: #ffc208;
+  --color-red: #dd3546;
+}
+
+body {
+  background-color: transparent;
 }
 
 /* Navbar */
-nav{
-    background-color: #353A40;
+.navbar-collapse {
+  flex-grow: 0;
 }
 
-.logo-cac{
-    width: 8rem;
+nav {
+  background-color: var(--color-dark);
 }
 
-.title-logo-cac{
-    display: none;
+.logo-cac {
+  width: 8rem;
 }
 
+.title-logo-cac {
+  display: none;
+}
 
-@media ( width >= 425px) {
-    .title-logo-cac{
-        display: inline-block;
-    }
+li a {
+  color: #999ea1 !important;
+}
+
+.active {
+  color: var(--color-letter) !important;
+}
+
+/* Main  */
+
+.intro {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/ba1.jpg);
+  background-size: auto;
+  background-position: 0;
+  min-height: 85vh;
+}
+
+.btn-speaker {
+  border: 1px solid white;
+  padding: 0.4rem 1rem;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.btn-buy-tickets {
+  border: 1px solid var(--color-green);
+  padding: 0.4rem 1rem;
+  background-color: var(--color-green);
+  color: white;
+  font-size: 1.4rem;
+}
+
+.container-intro {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-inline: 2rem;
+  color: var(--color-letter);
+}
+
+.container-intro p {
+  font-size: 1.5rem;
+}
+
+section {
+  padding-top: 1rem;
+}
+
+section h2,
+section h3 {
+  color: black;
+  text-align: center;
+}
+
+section h3 {
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-weight: 650;
+  font-size: 2.4rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.title-container {
+  padding-block: 1rem;
+}
+
+.card-text {
+  line-height: 2rem;
+}
+
+.pill {
+  padding-inline: 0.5rem;
+  padding-block: 0.15rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.js-pill {
+  background-color: var(--color-yellow);
+}
+
+.react-pill {
+  background-color: var(--color-blue);
+  color: whitesmoke;
+}
+.business-pill {
+  background-color: var(--color-red);
+  color: whitesmoke;
+}
+
+.startup-pill {
+  background-color: var(--color-dark);
+  color: whitesmoke;
+}
+
+.honolulu-text-container {
+  background-color: var(--color-dark);
+  padding: 1.5rem;
+  margin-left: 1px;
+}
+
+.honolulu-text-container h2 {
+  text-align: start;
+}
+
+.honolulu-text-container h2,
+.honolulu-text-container p {
+  color: whitesmoke;
+}
+
+.btn-know{
+  border: 1px solid white;
+  color: white;
+}
+
+/* Form */
+
+.dotted {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comments-label {
+  font-size: 1.5rem;
+  color: grey;
+}
+
+.btn-send {
+  background-color: var(--color-green-form);
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+/* Footer */
+footer {
+  margin-top: 2rem;
+  min-height: 15vh;
+  background-color: var(--color-blue-footer);
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 6rem;
+}
+
+footer a {
+  max-width: 8rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+@media (width >= 425px) {
+  .title-logo-cac {
+    display: inline-block;
+  }
+}
+
+@media (width >= 992px) {
+  .container-intro {
+    padding-right: 10rem;
+    align-items: flex-end;
+    text-align: end;
+  }
+}
+
+@media (width <= 605px) {
+  .comments-label {
+    font-size: 0.8rem;
+  }
+  footer a {
+    padding-block: 0.5rem;
+  }
+}
+
+@media (width <= 1100px) {
+  footer {
+    padding: 0 2rem;
+  }
+  footer a {
+    padding-inline: 1rem;
+  }
+}
+
+@media (width <= 350px) {
+  .comments-label {
+    font-size: 0.7rem;
+  }
+  .btn{
+    padding: 0;
+  }
 }
