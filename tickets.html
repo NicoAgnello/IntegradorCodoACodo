@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/index.css" />
-    <title>Codo A Codo</title>
+    <title>Codo A Codo || Tickets</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg" data-bs-theme="light">
@@ -66,45 +66,49 @@
         <div class="col-8 col-md-2 text-center card-descuento">
           <h3>Trainee</h3>
           <p>Tienen un descuento de:</p>
-          <b>80%</b>
+          <b>50%</b>
           <p>* presentar documentación</p>
         </div>
         <div class="col-8 col-md-2 text-center card-descuento">
           <h3>Junior</h3>
           <p>Tienen un descuento de:</p>
-          <b>80%</b>
+          <b>15%</b>
           <p>* presentar documentación</p>
         </div>
       </section>
-      <div class="form-container d-flex flex-column align-items-center justify-content-evenly ">
+      <div class="form-container d-flex flex-column align-items-center justify-content-evenly">
         <h4 class="text-center valor-ticket py-4 py-md-0">VALOR DEL TICKET: $200</h4>
         <form class="container">
           <div class="row">
             <div class="col-12 col-lg-6 ps-lg-0 px-1">
-              <input type="text" class="form-control" placeholder="Nombre" />
+              <input id="first-name" type="text" class="form-control" placeholder="Nombre" />
             </div>
             <div class="col-12 col-lg-6 pe-lg-0 mt-2 mt-lg-0 px-1">
-              <input type="text" class="form-control" placeholder="Apellido" />
+              <input id="last-name" type="text" class="form-control" placeholder="Apellido" />
             </div>
             <div class="col-12 py-3 px-1 px-lg-0">
-              <input type="email" class="form-control" placeholder="Correo" />
+              <input id="email" type="email" class="form-control" placeholder="Correo" />
+              <span id="span-warning"></span>
             </div>
             <div class="col-12 col-lg-6 px-1 px-lg-0">
-              <label for="exampleFormControlInput1" class="form-label">Cantidad</label>
-              <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="..." />
+              <label for="cantidad-tickets" class="form-label">Cantidad</label>
+              <input type="number" class="form-control" id="cantidad-tickets" placeholder="..." />
             </div>
             <div class="col-12 col-lg-6 pe-lg-0 mt-4 mt-lg-0 p-0 px-md-2">
               <label for="exampleDataList" class="form-label">Categoria</label>
-              <select class="form-select form-select" aria-label="Small select example">
-                <option selected disabled> Seleccionar</option>
-                <option value="1">Estudiante</option>
-                <option value="2">Trainee</option>
-                <option value="3">Junior</option>
+              <select id="categoria" class="form-select form-select" aria-label="Small select example">
+                <option value="" selected disabled>Seleccionar</option>
+                <option value="estudiante">Estudiante</option>
+                <option value="trainee">Trainee</option>
+                <option value="junior">Junior</option>
               </select>
             </div>
+            <div id="container-resumen" class="col-12 text-center">
+              <span id="resumen-compra"></span>
+            </div>
             <div class="box-boton">
-              <button type="submit" class="btn btn-form">Borrar</button>
-              <button type="submit" class="btn btn-form">Resumen</button>
+              <button id="btnReiniciarForm" type="submit" class="btn btn-form">Borrar</button>
+              <button id="btnGenerarResumen" type="button" class="btn btn-form">Resumen</button>
             </div>
           </div>
         </form>
@@ -124,6 +128,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/tickets.js"></script>
   </body>
 </html>

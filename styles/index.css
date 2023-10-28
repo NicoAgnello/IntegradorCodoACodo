@@ -37,7 +37,6 @@ li a {
   color: #999ea1 !important;
 }
 
-
 .active {
   color: var(--color-letter) !important;
 }
@@ -324,4 +323,22 @@ footer a {
   .box-boton {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+#span-warning {
+  margin-left: 0.5rem;
+  color: red;
+}
+
+.container-resumen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14vh;
+  background-color: #cce5ff;
+  color: #20548b;
+  font-weight: bold;
+  border-radius: 2rem;
+  margin-block: 2rem;
+  border: 2px solid #20548b;
 }
