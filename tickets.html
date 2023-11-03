@@ -78,7 +78,7 @@
       </section>
       <div class="form-container d-flex flex-column align-items-center justify-content-evenly">
         <h4 class="text-center valor-ticket py-4 py-md-0">VALOR DEL TICKET: $200</h4>
-        <form class="container">
+        <form class="container" id="formulario">
           <div class="row">
             <div class="col-12 col-lg-6 ps-lg-0 px-1">
               <input id="first-name" type="text" class="form-control" placeholder="Nombre" />
@@ -107,7 +107,9 @@
               <span id="resumen-compra"></span>
             </div>
             <div class="box-boton">
-              <button id="btnReiniciarForm" type="submit" class="btn btn-form">Borrar</button>
+              <button id="btnReiniciarForm" onclick="reiniciarFormulario()" type="submit" class="btn btn-form">
+                Borrar
+              </button>
               <button id="btnGenerarResumen" type="button" class="btn btn-form">Resumen</button>
             </div>
           </div>

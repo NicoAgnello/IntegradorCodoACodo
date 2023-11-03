@@ -79,3 +79,8 @@ function validarEmail(event) {
     document.getElementById("span-warning").innerText = "";
   }
 }
+
+function reiniciarFormulario() {
+  const form = document.getElementById("formulario");
+  form.reset();
+}
