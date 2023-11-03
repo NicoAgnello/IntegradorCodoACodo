@@ -7,6 +7,9 @@
   --color-blue-footer: #1d4255;
   --color-yellow: #ffc208;
   --color-red: #dd3546;
+  --color-estudiante: #007bff;
+  --color-trainee: #17a2b8;
+  --color-junior: #ffc107;
 }
 
 body {
@@ -38,6 +41,14 @@ li a {
   color: var(--color-letter) !important;
 }
 
+.conferencia-link {
+  text-decoration: underline;
+  text-underline-offset: 0.5em; /* Ajusta el espacio entre el texto y el subrayado según tus preferencias */
+}
+
+.orador-link {
+  color: white !important;
+}
 /* Main  */
 
 .intro {
@@ -156,7 +167,7 @@ h2 {
   color: whitesmoke;
 }
 
-.btn-know{
+.btn-know {
   border: 1px solid white;
   color: white;
 }
@@ -238,7 +249,96 @@ footer a {
   .comments-label {
     font-size: 0.7rem;
   }
-  .btn{
+  .btn {
     padding: 0;
   }
+}
+
+/* tickets.html */
+
+.form-container {
+  min-height: 50vh;
+}
+
+.ticket-link {
+  text-decoration: underline;
+  text-underline-offset: 0.5em; /* Ajusta el espacio entre el texto y el subrayado según tus preferencias */
+}
+.hover-link:hover {
+  font-weight: bold;
+}
+
+/* cards */
+
+.card-descuento {
+  padding: 0;
+  padding-top: 1rem;
+}
+
+.card-descuento h3 {
+  font-weight: 600;
+}
+.card-descuento p {
+  margin: 0;
+}
+
+.card-descuento p:last-of-type {
+  color: hsl(0, 0%, 60%);
+  margin: 0.7rem;
+}
+
+.card-descuento:first-of-type {
+  border: 1px solid var(--color-estudiante);
+}
+.card-descuento:nth-of-type(2) {
+  border: 1px solid var(--color-trainee);
+}
+.card-descuento:nth-of-type(3) {
+  border: 1px solid var(--color-junior);
+}
+
+.valor-ticket {
+  font-size: 3rem;
+}
+
+.box-boton {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+
+.btn-form {
+  background-color: var(--color-green-form);
+  font-weight: 600;
+  color: white;
+}
+.btn-form:hover {
+  background-color: #29a744;
+  color: black;
+}
+
+@media (width<=992px) {
+  .box-boton {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+#span-warning {
+  margin-left: 0.5rem;
+  color: red;
+}
+
+.container-resumen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14vh;
+  background-color: #cce5ff;
+  color: #20548b;
+  font-weight: bold;
+  border-radius: 2rem;
+  margin-block: 2rem;
+  border: 2px solid #20548b;
 }
