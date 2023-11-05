@@ -2,14 +2,13 @@ const getElement = (id) => {
   return document.getElementById(id).value;
 };
 
-document.getElementById("email").addEventListener("change", validarEmail);
-document.getElementById("cantidad-tickets").addEventListener("change", validarCantidad);
-
 const generarResumen = () => {
-  validarNombres();
   const firstName = getElement("first-name");
   const lastName = getElement("last-name");
   const email = getElement("email");
+  validarNombres(firstName, lastName);
+  validarEmail();
+  validarCantidad();
   if (firstName && lastName && email) {
     const categoria = getElement("categoria");
     const cantidad = Number(getElement("cantidad-tickets"));
@@ -32,13 +31,8 @@ const generarResumen = () => {
   }
 };
 
-document.getElementById("btnGenerarResumen").addEventListener("click", generarResumen);
-
-function validarNombres() {
-  const firstName = getElement("first-name");
-  const lastName = getElement("last-name");
-
-  if (firstName.length <= 2) {
+function validarNombres(firstName, lastName) {
+  if (firstName.length <= 2 ) {
     return Swal.fire({
       title: "Error!",
       text: "Nombre incorrecto o incompleto",
@@ -46,7 +40,7 @@ function validarNombres() {
       confirmButtonText: "Ok",
       confirmButtonColor: "#96c93e",
     });
-  } else if (lastName.length <= 2) {
+  } else if (lastName.length <= 2 ) {
     return Swal.fire({
       title: "Error!",
       text: "Apellido incorrecto o incompleto",
@@ -57,9 +51,9 @@ function validarNombres() {
   }
 }
 
-function validarCantidad(event) {
-  const value = event.target.value;
-  if (!value || isNaN(value)) {
+function validarCantidad() {
+  const cantidad = document.getElementById("cantidad-tickets").value;
+  if (!cantidad || isNaN(cantidad)) {
     return Swal.fire({
       title: "Error!",
       text: "Ingrese una cantidad valida",
@@ -70,13 +64,13 @@ function validarCantidad(event) {
   }
 }
 
-function validarEmail(event) {
-  let value = event.target;
-  emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-  if (!emailRegex.test(value.value)) {
+function validarEmail() {
+  const email = document.getElementById("email").value;
+  const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+  if (!emailRegex.test(email)) {
     document.getElementById("span-warning").innerText = "Email incorrecto";
   } else {
-    document.getElementById("span-warning").innerText = "";
+    document.getElementById("span-warning").innerText = " ";
   }
 }
 
