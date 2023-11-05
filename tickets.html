@@ -57,19 +57,19 @@
     <main class="container-fluid">
       <h1 class="text-center mt-3">TICKETS</h1>
       <section class="row d-flex justify-content-center gap-3">
-        <div class="col-8 col-md-2 text-center card-descuento">
+        <div id="container-estudiante" class="col-8 col-md-2 text-center card-descuento" onclick="setCategoria(this)">
           <h3>Estudiante</h3>
           <p>Tienen un descuento de:</p>
           <b>80%</b>
           <p>* presentar documentación</p>
         </div>
-        <div class="col-8 col-md-2 text-center card-descuento">
+        <div id="container-trainee" class="col-8 col-md-2 text-center card-descuento" onclick="setCategoria(this)">
           <h3>Trainee</h3>
           <p>Tienen un descuento de:</p>
           <b>50%</b>
           <p>* presentar documentación</p>
         </div>
-        <div class="col-8 col-md-2 text-center card-descuento">
+        <div id="container-junior" class="col-8 col-md-2 text-center card-descuento" onclick="setCategoria(this)">
           <h3>Junior</h3>
           <p>Tienen un descuento de:</p>
           <b>15%</b>
@@ -110,7 +110,9 @@
               <button id="btnReiniciarForm" onclick="reiniciarFormulario()" type="submit" class="btn btn-form">
                 Borrar
               </button>
-              <button id="btnGenerarResumen" onclick="generarResumen()" type="button" class="btn btn-form">Resumen</button>
+              <button id="btnGenerarResumen" onclick="generarResumen()" type="button" class="btn btn-form">
+                Resumen
+              </button>
             </div>
           </div>
         </form>
