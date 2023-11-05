@@ -10,16 +10,22 @@ const generarResumen = () => {
   validarEmail();
   validarCantidad();
   if (firstName && lastName && email) {
-    const categoria = getElement("categoria");
     const cantidad = Number(getElement("cantidad-tickets"));
     const valorTicket = 200;
+    const categoria = getElement("categoria");
     let descuento;
-    if (categoria === "estudiante") {
-      descuento = 0.8;
-    } else if (categoria === "trainee") {
-      descuento = 0.5;
-    } else if (categoria === "junior") {
-      descuento = 0.15;
+    switch (categoria) {
+      case "estudiante":
+        descuento = 0.8;
+        break;
+      case "trainee":
+        descuento = 0.5;
+        break;
+      case "junior":
+        descuento = 0.15;
+        break;
+      default:
+        break;
     }
     const precio = valorTicket * cantidad;
     const descuentoFinal = precio * descuento;
@@ -32,7 +38,7 @@ const generarResumen = () => {
 };
 
 function validarNombres(firstName, lastName) {
-  if (firstName.length <= 2 ) {
+  if (firstName.length <= 2) {
     return Swal.fire({
       title: "Error!",
       text: "Nombre incorrecto o incompleto",
@@ -40,7 +46,7 @@ function validarNombres(firstName, lastName) {
       confirmButtonText: "Ok",
       confirmButtonColor: "#96c93e",
     });
-  } else if (lastName.length <= 2 ) {
+  } else if (lastName.length <= 2) {
     return Swal.fire({
       title: "Error!",
       text: "Apellido incorrecto o incompleto",
@@ -77,4 +83,19 @@ function validarEmail() {
 function reiniciarFormulario() {
   const form = document.getElementById("formulario");
   form.reset();
+}
+
+function setCategoria(e) {
+  let inputCategoria = document.getElementById("categoria");
+  switch (e.id) {
+    case "container-estudiante":
+      inputCategoria.selectedIndex = 1;
+      break;
+    case "container-trainee":
+      inputCategoria.selectedIndex = 2;
+      break;
+    case "container-junior":
+      inputCategoria.selectedIndex = 3;
+      break;
+  }
 }
