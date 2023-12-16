@@ -20,6 +20,10 @@ const crearOperador = () => {
         icon: "success",
         confirmButtonColor: "#0d6efd",
       });
+      document.getElementById("nombre-orador").value = "";
+      document.getElementById("apellido-orador").value = "";
+      document.getElementById("email-orador").value = "";
+      document.getElementById("floatingTextarea2").value = "";
     })
     .catch((err) => console.log(err));
 };
