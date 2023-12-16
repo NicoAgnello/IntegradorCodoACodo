@@ -13,11 +13,15 @@ const crearOperador = () => {
   })
     .then((response) => response.json())
     .then((json) => {
-      alert(`alta de orador id:${json.id}] ok`);
+      Swal.fire({
+        position: "top",
+        title: "Se ha creado el orador",
+        text: `ID : ${json.id}`,
+        icon: "success",
+        confirmButtonColor: "#0d6efd",
+      });
     })
     .catch((err) => console.log(err));
 };
 
 document.getElementById("btnCrear").addEventListener("click", crearOperador);
-
-
