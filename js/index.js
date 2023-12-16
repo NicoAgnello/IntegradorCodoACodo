@@ -13,11 +13,19 @@ const crearOperador = () => {
   })
     .then((response) => response.json())
     .then((json) => {
-      alert(`alta de orador id:${json.id}] ok`);
+      Swal.fire({
+        position: "top",
+        title: "Se ha creado el orador",
+        text: `ID : ${json.id}`,
+        icon: "success",
+        confirmButtonColor: "#0d6efd",
+      });
+      document.getElementById("nombre-orador").value = "";
+      document.getElementById("apellido-orador").value = "";
+      document.getElementById("email-orador").value = "";
+      document.getElementById("floatingTextarea2").value = "";
     })
     .catch((err) => console.log(err));
 };
 
 document.getElementById("btnCrear").addEventListener("click", crearOperador);
-
-
